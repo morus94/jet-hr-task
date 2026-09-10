@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Calcolatore Netto da RAL</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <h1>Calcolatore Netto da RAL</h1>
+  <p class="subtitle">Stima della retribuzione netta annuale e mensile a partire dalla RAL, per un dipendente a tempo
+    indeterminato residente a Milano.</p>
+
+  <div class="box">
+    <div class="campo">
+      <label for="ral">Retribuzione Annua Lorda (RAL) in euro</label>
+      <input type="number" id="ral" placeholder="es. 32000" min="0" step="100">
+    </div>
+    <div class="campo">
+      <label for="mensilita">Numero di mensilità</label>
+      <select id="mensilita">
+        <option value="12">12</option>
+        <option value="13" selected>13</option>
+        <option value="14">14</option>
+      </select>
+    </div>
+    <button onclick="calcola()">Calcola</button>
+  </div>
+
+  <div class="box risultati" id="risultati">
+    <table>
+      <tbody>
+        <tr>
+          <td>RAL</td>
+          <td class="value" id="out-ral"></td>
+        </tr>
+        <tr>
+          <td>Contributi INPS a carico dipendente (9,19%)</td>
+          <td class="value" id="out-inps"></td>
+        </tr>
+        <tr>
+          <td>Imponibile IRPEF</td>
+          <td class="value" id="out-imponibile"></td>
+        </tr>
+        <tr>
+          <td>IRPEF lorda</td>
+          <td class="value" id="out-irpef-lorda"></td>
+        </tr>
+        <tr>
+          <td>Detrazione lavoro dipendente</td>
+          <td class="value" id="out-detrazione"></td>
+        </tr>
+        <tr>
+          <td>Ulteriore detrazione</td>
+          <td class="value" id="out-ulteriore-detrazione"></td>
+        </tr>
+        <tr>
+          <td>IRPEF netta</td>
+          <td class="value" id="out-irpef-netta"></td>
+        </tr>
+        <tr>
+          <td>Addizionale regionale (Lombardia)</td>
+          <td class="value" id="out-add-reg"></td>
+        </tr>
+        <tr>
+          <td>Addizionale comunale (Milano)</td>
+          <td class="value" id="out-add-com"></td>
+        </tr>
+        <tr class="totale">
+          <td>Totale trattenute (contributi + tasse)</td>
+          <td class="value" id="out-totale-trattenute"></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="netti">
+      <div>
+        <div class="label">Netto annuo</div>
+        <div class="valore" id="out-netto-annuo"></div>
+      </div>
+      <div>
+        <div class="label">Netto mensile (su <span id="out-mensilita"></span> mensilità)</div>
+        <div class="valore" id="out-netto-mensile"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>

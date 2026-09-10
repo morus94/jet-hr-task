@@ -1,0 +1,108 @@
+body {
+  font-family: -apple-system, Helvetica, Arial, sans-serif;
+  color: #1a1a1a;
+  max-width: 640px;
+  margin: 50px auto;
+  padding: 0 16px;
+  line-height: 1.4;
+}
+
+h1 {
+  font-size: 19px;
+  margin-bottom: 2px;
+}
+
+p.subtitle {
+  color: #666;
+  margin-top: 0;
+  font-size: 13px;
+}
+
+.box {
+  border: 1px solid #ccc;
+  padding: 16px;
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+input[type=number],
+select {
+  padding: 6px;
+  font-size: 15px;
+  border: 1px solid #999;
+}
+
+input[type=number] {
+  width: 180px;
+}
+
+.campo {
+  margin-bottom: 14px;
+}
+
+button {
+  padding: 7px 16px;
+  font-size: 14px;
+  background: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #000;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 5px 2px;
+  border-bottom: 1px solid #eee;
+  font-size: 13px;
+}
+
+td.value {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+tr.totale td {
+  font-weight: bold;
+  border-top: 1px solid #999;
+  border-bottom: none;
+  padding-top: 8px;
+}
+
+.risultati {
+  display: none;
+}
+
+.netti {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid #999;
+}
+
+.netti div {
+  flex: 1;
+}
+
+.netti .label {
+  font-size: 12px;
+  color: #666;
+}
+
+.netti .valore {
+  font-size: 20px;
+  font-weight: bold;
+}
